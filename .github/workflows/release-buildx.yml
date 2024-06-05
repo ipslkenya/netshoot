@@ -35,13 +35,13 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         run: |
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
-      - 
-        name: docker ghcr login
-        env:
-          GHCR_USER: ${{secrets.GHCR_USER}}
-          GHCR_TOKEN: ${{secrets.GHCR_TOKEN}}
-        run: |
-            docker login ghcr.io -u $GHCR_USER -p $GHCR_TOKEN
+      # - 
+      #   name: docker ghcr login
+      #   env:
+      #     GHCR_USER: ${{secrets.GHCR_USER}}
+      #     GHCR_TOKEN: ${{secrets.GHCR_TOKEN}}
+      #   run: |
+      #       docker login ghcr.io -u $GHCR_USER -p $GHCR_TOKEN
       -
         name: Run Buildx
         run: |
